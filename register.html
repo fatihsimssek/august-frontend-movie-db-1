@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/css/animates.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="rg-container">
+      <div class="rg-form">
+        <div class="rg-form-left">
+          <a class="rg-home-icon-link" href="/index.html">
+            <img
+              class="rg-home-icon"
+              src="/assets/icons/login-register-home-icon.svg"
+              alt="home"
+            />
+          </a>
+          <img
+            class="rg-logo"
+            src="/assets/images/login-register-logo.png"
+            alt="logo"
+          />
+          <p class="rg-greeting-message">Nice to meet you :)</p>
+          <p class="rg-greeting-subtitle-message">
+            Just register to join with us
+          </p>
+        </div>
+        <div class="rg-form-right">
+          <div class="rg-form-head">
+            <h2 class="rg-form-title">Register</h2>
+            <a class="rg-form-link" href="/login.html">
+              <img
+                src="/assets/icons/login-register-right-arrow.svg"
+                alt="redirect arrow"
+                class="rg-form-link-arrow"
+              />
+              Already have account?
+            </a>
+          </div>
+          <div class="rg-form-social-login">
+            <div class="rg-social-links">
+              <button class="rg-social-link rg-fb">
+                <img
+                  class="rg-social-link-icon"
+                  src="/assets/icons/login-facebook.svg"
+                  alt="login facebook"
+                />FACEBOOK
+              </button>
+              <button class="rg-social-link rg-tw">
+                <img
+                  class="rg-social-link-icon"
+                  src="/assets/icons/login-twitter.svg"
+                  alt="login twitter"
+                />TWITTER
+              </button>
+              <button class="rg-social-link rg-g">
+                <img
+                  class="rg-social-link-icon"
+                  src="/assets/icons/login-google.svg"
+                  alt="login google"
+                />GOOGLE
+              </button>
+            </div>
+            <div class="rg-redirect-email-text">
+              <div class="rg-redirect-email-text-line"></div>
+              <div class="rg-redirect-email-text-message">
+                Or register with email
+              </div>
+              <div class="rg-redirect-email-text-line"></div>
+            </div>
+          </div>
+          <!-- => Register form start -->
+          <form
+            class="rg-form-inputs"
+            id="registerForm"
+            onsubmit="registerFormSubmitHandler(event)"
+            novalidate
+          >
+            <div class="rg-form-input">
+              <label class="rg-form-input-title" for="name">Name*</label>
+              <input
+                id="name"
+                class="rg-form-input-area"
+                type="text"
+                name="name"
+              />
+              <span id="nameError" class="rg-form-input-name-error"
+                >Name should be 3 characters or than more</span
+              >
+            </div>
+            <div class="rg-form-input">
+              <label class="rg-form-input-title" for="email">Email*</label>
+              <input
+                id="email"
+                class="rg-form-input-area"
+                type="email"
+                name="email"
+              />
+              <span id="emailError" class="rg-form-input-email-error"
+                >No valid email</span
+              >
+            </div>
+            <div class="rg-form-input-psw">
+              <div class="rg-form-input-password">
+                <label class="rg-form-input-title" for="password"
+                  >Password*</label
+                >
+                <input
+                  id="password"
+                  class="rg-form-input-area"
+                  type="password"
+                  name="password"
+                />
+                <span id="passwordError" class="rg-form-input-password-error"
+                  >Password should be 8 characters or than more</span
+                >
+              </div>
+              <div class="rg-form-input-confirm-password">
+                <label class="rg-form-input-title" for="confirmPassword">
+                  Confirm password*
+                </label>
+                <input
+                  id="confirmPassword"
+                  class="rg-form-input-area"
+                  type="password"
+                  name="confirmPassword"
+                />
+                <span
+                  id="confirmPasswordError"
+                  class="rg-form-input-confirm-password-error"
+                >
+                  Confirm password must match password
+                </span>
+              </div>
+            </div>
+            <div class="rg-form-options">
+              <div class="rg-form-options-terms">
+                <div class="rg-form-options-term-piece">
+                  <input
+                    id="lgCheckbox"
+                    class="rg-form-options-checkbox"
+                    type="checkbox"
+                    name="sppCheckbox"
+                  />
+                  <label for="lgCheckbox" class="rg-form-options-checkbox-label"
+                    >I have read and accept the Terms of
+                    <a class="rg-form-spp-link" href="#">
+                      Service & Privacy Policy *
+                    </a>
+                  </label>
+                </div>
+                <span
+                  id="userTermsError"
+                  class="rg-form-input-user-terms-error"
+                >
+                  You must accept the terms
+                </span>
+              </div>
+              <button type="submit" class="rg-form-submit-btn">CONTINUE</button>
+            </div>
+          </form>
+          <!-- => Register form end -->
+        </div>
+      </div>
+    </div>
+
+    <div id="registerAlertBox" class="rg-alert-box">
+      <h3 class="rg-alert-title"></h3>
+      <p class="rg-alert-content"></p>
+      <div id="registerProgressBar" class="rg-alert-progress-bar">
+        <div class="rg-alert-progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <script src="/js/register.js"></script>
+  </body>
+</html>

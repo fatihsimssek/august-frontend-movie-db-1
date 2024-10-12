@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie DB</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section Start - Parviz -->
+
+    <header>
+      <nav>
+        <div class="nav-menu">
+          <div class="toggle-menu">
+            <ion-icon name="menu"></ion-icon>
+          </div>
+          <a href="#">
+            <img src="./assets/images/logo.png" id="logo" alt="Movie DB Logo" />
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="#">Promotions</a></li>
+            <li><a href="#">Featured</a></li>
+            <li><a href="#">Top Categories</a></li>
+            <li><a href="#">All Categories</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="hidden-line">
+        <span class="divide"></span>
+      </div>
+
+      <nav class="nav-auth">
+        <div class="auth-links">
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+        </div>
+
+        <div class="menu-setting">
+          <ion-icon name="settings"></ion-icon>
+          <div class="setting-sidebar">
+            <h3>Theme Mode</h3>
+            <div class="dark-mode">
+              <span>Light</span><ion-icon name="sunny"></ion-icon
+              ><span>Dark</span>
+            </div>
+            <hr class="divider-sidebar" />
+            <h3>Language</h3>
+            <ul>
+              <li>English</li>
+              <li>Turkish</li>
+
+              <div class="logout">
+                <ion-icon name="log-out"></ion-icon> LogOut
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="mobile-nav">
+        <ul>
+          <li>
+            <a href="">Promotions</a>
+          </li>
+          <li>
+            <a href="">Featured</a>
+          </li>
+          <li>
+            <a href="">Top Categories</a>
+          </li>
+          <li>
+            <a href="">All Categories</a>
+          </li>
+          <li>
+            <a href="">Pricing</a>
+          </li>
+        </ul>
+
+        <hr class="divider-sidebar" />
+
+        <ul>
+          <li><a href="">Login</a></li>
+          <li><a href="">Register</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="video-background"></div>
+
+    <!-- Header Section End - Parviz -->
+
+    <!-- Trending Movies Start - Onur -->
+
+    <section class="hs-section">
+      <div class="hs-container">
+        <button class="hs-prev-btn" onclick="prevSlider(event)">
+          <img
+            src="/assets/icons/left-arrow.svg"
+            alt=""
+            class="hs-prev-btn-arrow"
+          />
+        </button>
+        <div class="hs-wrapper">
+          <div id="cardList" class="hs-card-list"></div>
+        </div>
+        <button class="hs-next-btn" onclick="nextSlider(event)">
+          <img
+            src="/assets/icons/right-arrow.svg"
+            alt=""
+            class="hs-next-btn-arrow"
+          />
+        </button>
+      </div>
+    </section>
+
+    <!-- Trending Movies End - Onur -->
+
+    <!-- Ionicons Included -->
+    <!--Erkin Implement the Most Watched Section START-->
+    <section class="most-watched-section">
+      <div class="imw-container">
+        <div class="imw-title-box">
+          <div class="imw-title-main">
+            <h4 class="imw-primary-title">Most</h4>
+            <h4 class="imw-secondary-title">Watched</h4>
+          </div>
+          <p class="imw-paragraph">
+            Watch and download full film, seasons and episodes movies & TV shows
+            online or stream right to your smart TV, game console, PC, Mac,
+            mobile, tablet and more.
+          </p>
+        </div>
+        <div class="imw-films">
+          <div class="imw-film-box"></div>
+          <div class="imw-film-box"></div>
+          <div class="imw-film-box"></div>
+        </div>
+      </div>
+    </section>
+    <!--Erkin Implement the Most Watched Section END-->
+    <!-- [AU-16] - Banner - Esra - START-->
+    <section class="about-explore-packages-container">
+      <div class="about-image-box-25">
+        <img src="assets/images/popcorn.png" class="about-ep-image" />
+        <div class="about-image-text">
+          <h6 style="text-align: center">FREE</h6>
+          <h6 style="text-align: center">RENT 3 DAYS</h6>
+        </div>
+      </div>
+      <div class="about-image-box-50 span-image">
+        <img src="assets/images/cinema.png" class="about-ep-image" />
+        <div class="about-image-text2">
+          <h6 style="text-align: right">
+            <i class="fa-solid fa-mug-hot"></i>&nbsp;FREE
+          </h6>
+          <h6 style="text-align: right">MOVIES</h6>
+        </div>
+      </div>
+      <div class="about-image-box-25">
+        <img src="assets/images/summer.png" class="about-ep-image" />
+        <div class="about-image-text3">
+          <h6 style="text-align: center">FREE</h6>
+          <h6 style="text-align: center">UP TO 5 EPISODES</h6>
+        </div>
+      </div>
+    </section>
+    <!-- [AU-16] - Banner - Esra - END-->
+
+    <!--Fatih-[AU-15]Implement the Top Categories section start -->
+
+    <section class="top-categories">
+      <div class="top-container">
+        <div class="top-categories-paragraph">
+          <div class="top-title-main">
+            <h4 class="top-title-primary">Top</h4>
+            <h4 class="top-title-secondary">Categories</h4>
+          </div>
+          <div class="top-award-princess">
+            <div class="top-award transition">
+              <div class="top-award-left">
+                <img src="assets/images/award.png" alt="Award" />
+              </div>
+              <div class="top-award-right">
+                <span class="top-award-desc">
+                  <h2 class="top-award-title">Academy <br> Awards</h2>
+                  <p class="top-award-p">2.4K Films</p>
+                </span>
+              </div>
+            </div>
+            <div class="top-princess transition">
+              <div class="top-princess-left">
+                <img src="assets/images/princess.png" alt="princess" />
+              </div>
+              <div class="top-princess-right">
+                <span class="top-princess-desc">
+                  <h2>Animations</h2>
+                  <p>2.4K Films</p>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="top-container-cat">
+          <div class="top-container-bond-com-dra">
+            <div class="top-bond transition">
+              <img
+                src="assets/images/shadow-bond.png"
+                alt=""
+                class="shadow-bond"
+              />
+              <img src="assets/images/bond.png" alt="Bond" class="bond-img" />
+              <span class="bond-desc">
+                <h2>Actions</h2>
+                <p>2.4K Films</p>
+                <button class="top-bond-btn">EXPLORE</button>
+              </span>
+            </div>
+            <div class="top-container-romance-commedy">
+              <div class="top-vampire transition">
+                <div class="top-vampire-right">
+                  <img src="assets/images/vampire.png" alt="Vampire" />
+                </div>
+                <div class="top-vampire-left">
+                  <span class="romance-desc">
+                    <h2>Romance Drama</h2>
+                    <p>2.4K Films</p>
+                  </span>
+                </div>
+              </div>
+              <div class="top-commedy transition">
+                <div class="top-commedy-left">
+                  <img src="assets/images/bb-theory.png" alt="Bb Theory" />
+                </div>
+                <div class="top-commedy-right">
+                  <span class="comedy-desc">
+                    <h2>Commedy</h2>
+                    <p>2.4K Films</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="top-super transition">
+            <img src="assets/images/iron-man.png" alt="" class="shadow-iron" />
+            <img
+              class="iron-img"
+              src="assets/images/iron-man.png"
+              alt="Iron man"
+            />
+            <span class="super-desc">
+              <h2>Super Heroes</h2>
+              <p>2.4K Films</p>
+              <button class="top-super-btn">EXPLORE</button>
+            </span>
+            </div>
+        </div>
+          </section>
+    <!-- [AU-16] -Implement-the-All-Categories-section START-->
+    <section class="all-categories">
+      <div class="container-all">
+        <div class="title-main-all">
+          <h4 class="primary-title">All</h4>
+          <h4 class="secondary-title">Categories</h4>
+        </div>
+        <div class="item-slide">
+          <div class="btn-arrow">
+            <button class="btn-slide-prev" id="prev">
+              <img src="/assets/icons/button-prev.svg" alt="" />
+            </button>
+          </div>
+          <div class="slide-first-container">
+            <div class="slide-container"></div>
+          </div>
+          <div class="btn-arrow">
+            <button class="btn-slide-next" id="next">
+              <img src="assets/icons/button-next.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Fatih-[AU-15]Implement the Top Categories section end -->
+
+    <!-- [AU-16] -Implement-the-All-Categories-section END-->
+
+    <!-- [AU-16] - Flexible Plan - Esra - START-->
+    <section class="pricing-plan">
+      <div class="title-main align-center">
+        <h4 class="primary-title">Flexible</h4>
+        <h4 class="secondary-title">Pricing and Plan</h4>
+      </div>
+      <div class="pricing-wrap">
+        <div class="boxes">
+          <div
+            class="box-item fadeInUpShort"
+            style="
+              visibility: visible;
+              animation-duration: 0.4s;
+              animation-delay: 0.8s;
+              animation-name: fadeInUpShort;
+              animation: fadeInUpShort 3s;
+            "
+          >
+            <div class="card pricing-card basic" style="margin: 0 -8px">
+              <div class="title-card">
+                <p>Basic</p>
+                <h4 class="display-1">Free</h4>
+              </div>
+              <ul>
+                <li>Free to watch sports</li>
+                <li>Original Series Videos</li>
+                <li>Hollywood and local films</li>
+              </ul>
+              <div class="btn-area">
+                <p class="desc">Can be watched on 1 device at the same time.</p>
+                <a class="btn secondary" href="#">CHOOSE PLAN</a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="box-item fadeInUpShort"
+            style="
+              visibility: visible;
+              animation-duration: 0.4s;
+              animation-delay: 0.8s;
+              animation-name: fadeInUpShort;
+              animation: fadeInUpShort 3s;
+            "
+          >
+            <div class="card pricing-card value" style="margin: 0 -8px">
+              <div
+                class="title-card"
+                style="
+                  content: '';
+                  width: 160%;
+                  /* position: absolute; */
+                  border-radius: 50%;
+                  top: -10px;
+                  /* bottom: -60px; */
+                  /* height: 400px; */
+                  left: -30%;
+                  background: linear-gradient(145deg, #304ffe 40%, #e91e63 80%);
+                "
+              >
+                <p>Best Value</p>
+                <h4 class="display-1"><span>$</span>24</h4>
+              </div>
+              <ul>
+                <li>International TV,</li>
+                <li>Includes F1 and EPL</li>
+                <li>Watch ad-free videos</li>
+                <li>Get bonus Video Points for every platinum</li>
+                <li>Early Bird Diamond Package at a more affordable price</li>
+              </ul>
+              <div class="btn-area">
+                <p class="desc">
+                  The application can still be accessed without a subscription
+                  plan.
+                </p>
+                <a class="btn primary" href="#">CHOOSE PLAN</a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="box-item fadeInUpShort"
+            style="
+              visibility: visible;
+              animation-duration: 0.4s;
+              animation-delay: 0.8s;
+              animation-name: fadeInUpShort;
+              animation: fadeInUpShort 3s;
+            "
+          >
+            <div class="card pricing-card" style="margin: 0 -8px">
+              <div class="title-card">
+                <p>Pro</p>
+                <h4 class="display-1"><span>$</span>54</h4>
+              </div>
+              <ul>
+                <li>All Platinum shows</li>
+                <li>Includes all Platinum content</li>
+                <li>Watch ad-free videos</li>
+                <li>Platinum Shows</li>
+                <li>
+                  Get a bonus Vidio SF loyalty point for every platinum purchase
+                </li>
+              </ul>
+              <div class="btn-area">
+                <p class="desc">
+                  Subscription auto-renewal can be canceled at any time.
+                </p>
+                <a class="btn primary" href="#">CHOOSE PLAN</a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="box-item fadeInUpShort"
+            style="
+              visibility: visible;
+              animation-duration: 0.4s;
+              animation-delay: 0.8s;
+              animation-name: fadeInUpShort;
+              animation: fadeInUpShort 3s;
+            "
+          >
+            <div class="card pricing-card" style="margin: 0 -8px">
+              <div class="title-card">
+                <p>Enterprise</p>
+                <h4 class="display-1"><span>$</span>99</h4>
+              </div>
+              <ul>
+                <li>All Platinum shows</li>
+                <li>Includes all Platinum content</li>
+                <li>Watch ad-free videos</li>
+                <li>Get bonus Video Points for every platinum</li>
+                <li>Early Bird Diamond Package at a more affordable price</li>
+              </ul>
+              <div class="btn-area">
+                <p class="desc">
+                  Subscribing to Premier will still use the quota to watch.
+                </p>
+                <a class="btn primary" href="#">CHOOSE PLAN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [AU-16] - Flexible Plan - Esra - END-->
+
+    <!--Abdullah-[AU-2]Implement the Events and News section start -->
+    <section class="faq-section">
+      <div class="lef-box">
+        <div class="faq-tit-p">
+          <h1 class="faq-title">Frequently</h1>
+          <h1 class="faq-sub-title">Answers & Questions</h1>
+          <p class="faq-text">
+            Vestibulum sit amet tortor sit amet libero <br />
+            lobortis semper at et odio.
+          </p>
+        </div>
+        <div class="decoration-img-div">
+          <img class="deco-img" src="/img/Decoration.png" alt="img" />
+        </div>
+      </div>
+      <div class="faq-container">
+        <div class="faq">
+          <div class="faq-ques-div">
+            <h2 class="faq-question">How much does Movie App cost??</h2>
+            <button type="button" class="faq-btn">
+              <i class="fa-solid fa-angle-up"></i>
+            </button>
+          </div>
+          <p>
+            Plans range from USD 5.4 to USD 18.6 a month. No extra costs, no
+            contracts.
+          </p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-ques-div">
+            <h2 class="faq-question">Where can I watch?</h2>
+            <button type="button" class="faq-btn">
+              <i class="fa-solid fa-angle-up"></i>
+            </button>
+          </div>
+          <p>
+            Watch anywhere, anytime. Sign in with your account to watch
+            instantly on the web from your personal computer.
+          </p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-ques-div">
+            <h2 class="faq-question">How do I cancel?</h2>
+            <button type="button" class="faq-btn">
+              <i class="fa-solid fa-angle-up"></i>
+            </button>
+          </div>
+          <p>
+            There are no pesky contracts and no commitments. You can easily
+            cancel your account online in two clicks.
+          </p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-ques-div">
+            <h2 class="faq-question">What can I watch on this platform?</h2>
+            <button type="button" class="faq-btn">
+              <i class="fa-solid fa-angle-up"></i>
+            </button>
+          </div>
+          <p>
+            It has an extensive library of feature films, documentaries, TV
+            shows, anime, award-winning Netflix originals, and more.
+          </p>
+        </div>
+        <div class="faq">
+          <div class="faq-ques-div">
+            <h2 class="faq-question">Is it good for kids?</h2>
+            <button type="button" class="faq-btn">
+              <i class="fa-solid fa-angle-up"></i>
+            </button>
+          </div>
+          <p>
+            The Kids experience is included in your membership to give parents
+            control while kids enjoy family-friendly TV shows and movies in
+            their own space.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="/img/slider-1.jpg" alt="Image 1" />
+
+            <div class="slides-text">
+              <h2>NEWS</h2>
+              <p class="card-text">
+                Your yearly review should be an opportunity, <br />
+                a chore. Drop the politics and have real <br />
+                conversations.
+              </p>
+              <button>READ MORE</button>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="/img/slider-2.jpg" alt="Image 2" />
+
+            <div class="slides-text">
+              <h2>NEWS</h2>
+              <p class="card-text">
+                Here is how our Chief Revenue Office approaches <br />
+                the chicken-or-egg faq-question every SaaS company <br />
+                faces.
+              </p>
+              <button>READ MORE</button>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="/img/slider-3.jpg" alt="Image 3" />
+            <div class="slides-text">
+              <h2>NEWS</h2>
+              <p class="card-text">
+                Find out which team members are dominant, <br />
+                influencers, conscientious, or steady.
+              </p>
+              <button>READ MORE</button>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="/img/slider-4.jpg" alt="Image 4" />
+            <div class="slides-text">
+              <h2>NEWS</h2>
+              <p class="card-text">
+                The surprising secret ingredient of <br />
+                transformational leadership. Turns out, investing <br />
+                in your own personal happiness can uplift your <br />
+                team, too.
+              </p>
+              <button>READ MORE</button>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="/img/slider-5.jpg" alt="Image 5" />
+            <div class="slides-text">
+              <h2>NEWS</h2>
+              <p class="card-text">
+                Why your company’s security will depend on <br />
+                empathy and team collaboration in 2022.
+              </p>
+              <button>READ MORE</button>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="/img/slider-6.jpg" alt="Image 6" />
+            <div class="slides-text">
+              <h2>NEWS</h2>
+              <p class="card-text">
+                Whether you dread what the future holds for <br />
+                workers or embrace it with open arms, there is a <br />
+                lot to know and discover.
+              </p>
+              <button>READ MORE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+    <!--Abdullah-[AU-2]Implement the Events and News section end -->
+    <!-- Footer Section Start -->
+
+    <section class="footer-main">
+      <h1>What are you waiting for?</h1>
+      <button class="get-start-btn">
+        <h3>GET STARTED</h3>
+      </button>
+
+      <footer class="footer">
+        <div class="video-footer">
+          <img
+            src="assets/images/video-logo.png"
+            class="video-logo"
+            alt="video-logo"
+          />
+          <p>© Luxi Theme 2020</p>
+        </div>
+        <div class="footer-center">
+          <div class="phone-size-list">
+            <div class="phone-size-company-list">
+              <img src="assets/icons/ok.svg" alt="" />
+              <button class="accordion">Company</button>
+              <div class="panel">
+                <p><a href="#">Team</a></p>
+                <p><a href="#">History</a></p>
+                <p><a href="#">Contact us</a></p>
+                <p><a href="#">Location</a></p>
+              </div>
+            </div>
+
+            <div class="phone-size-services-list">
+              <img src="assets/icons/ok.svg" alt="" />
+              <button class="accordion">Services</button>
+              <div class="panel">
+                <p><a href="#">Services</a></p>
+                <p><a href="#">Service name</a></p>
+                <p><a href="#">Another service</a></p>
+                <p><a href="#">Final service</a></p>
+              </div>
+            </div>
+
+            <div class="phone-size-legal-list">
+              <img src="assets/icons/ok.svg" alt="" />
+              <button class="accordion">Legal</button>
+              <div class="panel">
+                <p><a href="#">Privacy policy </a></p>
+                <p><a href="#">Terms of use</a></p>
+                <p><a href="#">About us</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-submain">
+            <div class="company-footer">
+              <h4>COMPANY</h4>
+              <ul class="company-list">
+                <li><a href="#">Team</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Location</a></li>
+              </ul>
+            </div>
+
+            <div class="services-footer">
+              <h4>SERVICES</h4>
+              <ul class="services-list">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Service name</a></li>
+                <li><a href="#">Another service</a></li>
+                <li><a href="#">Final service</a></li>
+              </ul>
+            </div>
+
+            <div class="legal-footer">
+              <h4>LEGAL</h4>
+              <ul class="legal-list">
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">About us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-logo-footer">
+          <div class="social-logo">
+            <a href="#"
+              ><img
+                src="assets/images/facebook-logo.png"
+                class="img-logo"
+                alt="facebook"
+            /></a>
+            <a href="#"
+              ><img
+                src="assets/images/linkedin-logo.png"
+                class="img-logo"
+                alt="linkedin"
+            /></a>
+            <a href="#"
+              ><img
+                src="assets/images/twitter-logo.png"
+                class="img-logo"
+                alt="twitter"
+            /></a>
+            <a href="#"
+              ><img
+                src="assets/images/instagram-logo.png"
+                class="img-logo"
+                alt="instagram"
+            /></a>
+          </div>
+          <div class="language-footer">
+            <img
+              src="assets/images/android-globe.png"
+              class="world-logo"
+              alt=""
+            />
+            <select name="select" id="language-select">
+              <option value="select">English-En</option>
+              <option value="select">German-Du</option>
+              <option value="select">Turkish-Tr</option>
+            </select>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <!-- Footer Section Start -->
+
+    <!-- Ionicons Included -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Ionicons Included -->
+
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/config.js"></script>
+  </body>
+</html>

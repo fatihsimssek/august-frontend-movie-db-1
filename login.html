@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/animates.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Log in</title>
+  </head>
+  <body>
+    <div class="lg-container">
+      <div class="lg-form">
+        <div class="lg-form-left">
+          <a class="lg-home-icon-link" href="/index.html">
+            <img
+              class="lg-home-icon"
+              src="/assets/icons/login-register-home-icon.svg"
+              alt="home"
+            />
+          </a>
+          <img
+            class="lg-logo"
+            src="/assets/images/login-register-logo.png"
+            alt="logo"
+          />
+          <p class="lg-greeting-message">Welcome back</p>
+          <p class="lg-greeting-subtitle-message">Please login to continue</p>
+        </div>
+        <div class="lg-form-right">
+          <div class="lg-form-head">
+            <h2 class="lg-form-title">Login</h2>
+            <a class="lg-form-link" href="/register.html">
+              <img
+                src="/assets/icons/login-register-right-arrow.svg"
+                alt="redirect arrow"
+                class="lg-form-link-arrow"
+              />
+              Create new account
+            </a>
+          </div>
+          <div class="lg-form-social-login">
+            <div class="lg-social-links">
+              <button class="lg-social-link lg-fb">
+                <img
+                  class="lg-social-link-icon"
+                  src="/assets/icons/login-facebook.svg"
+                  alt="login facebook"
+                />FACEBOOK
+              </button>
+              <button class="lg-social-link lg-tw">
+                <img
+                  class="lg-social-link-icon"
+                  src="/assets/icons/login-twitter.svg"
+                  alt="login twitter"
+                />TWITTER
+              </button>
+              <button class="lg-social-link lg-g">
+                <img
+                  class="lg-social-link-icon"
+                  src="/assets/icons/login-google.svg"
+                  alt="login google"
+                />GOOGLE
+              </button>
+            </div>
+            <div class="lg-redirect-email-text">
+              <div class="lg-redirect-email-text-line"></div>
+              <div class="lg-redirect-email-text-message">
+                Or login with email
+              </div>
+              <div class="lg-redirect-email-text-line"></div>
+            </div>
+          </div>
+          <form
+            class="lg-form-inputs"
+            id="loginForm"
+            onsubmit="loginFormSubmitHandler(event)"
+            novalidate
+          >
+            <div class="lg-form-input">
+              <label class="lg-form-input-title" for="email">Email</label>
+              <input
+                id="email"
+                class="lg-form-input-area"
+                type="email"
+                name="email"
+              />
+              <span id="emailError" class="lg-form-input-email-error"
+                >Invalid mail address</span
+              >
+            </div>
+            <div class="lg-form-input">
+              <label class="lg-form-input-title" for="password">Password</label>
+              <input
+                id="password"
+                class="lg-form-input-area"
+                type="password"
+                name="password"
+              />
+              <span id="passwordError" class="lg-form-input-password-error"
+                >Password should be 8 characters or than more</span
+              >
+            </div>
+            <div class="lg-form-options">
+              <div class="lg-form-options-remember">
+                <input
+                  id="lgCheckbox"
+                  class="lg-form-options-checkbox"
+                  type="checkbox"
+                />
+                <label for="lgCheckbox" class="lg-form-options-chackbox-label"
+                  >Remember me</label
+                >
+              </div>
+              <a class="lg-form-options-forgot" href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="lg-form-submit-btn">CONTINUE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login alert -->
+    <div id="loginAlertBox" class="lg-alert-box">
+      <h3 class="lg-alert-title"></h3>
+      <p class="lg-alert-content"></p>
+      <div id="loginProgressBar" class="lg-alert-progress-bar">
+        <div class="lg-alert-progress-bar-fill"></div>
+      </div>
+    </div>
+    <script src="/js/login.js"></script>
+  </body>
+</html>

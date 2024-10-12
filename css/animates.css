@@ -1,0 +1,40 @@
+/* Animations Css Start */
+
+.alert-animate {
+  display: flex;
+  animation: alert_animation 4s forwards ease-in-out;
+}
+
+.progress-animate {
+  animation: progress_animation 1.5s forwards 1.5s linear;
+}
+
+@keyframes alert_animation {
+  0% {
+    transform: translateX(500px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  72.5% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(500px);
+  }
+}
+
+@keyframes progress_animation {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+/* Animations Css End */
